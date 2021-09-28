@@ -23,7 +23,7 @@ public class ServicioEstudio implements BaseServicios<Estudio>{     //implementa
     }
 
     @Override
-    public Estudio updateOne(Estudio entity) throws Exception {
+    public Estudio updateOne(Estudio entity, long id) throws Exception {
         return null;
     }
 

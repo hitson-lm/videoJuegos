@@ -23,7 +23,7 @@ public class ServicioVideojuego implements BaseServicios<Videojuego>{   //implem
     }
 
     @Override
-    public Videojuego updateOne(Videojuego entity) throws Exception {
+    public Videojuego updateOne(Videojuego entity,long id) throws Exception {
         return null;
     }
 

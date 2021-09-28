@@ -9,7 +9,7 @@ public interface BaseServicios<E> {     // con esta anotacion <E> decimos que nu
     public List<E> findAll() throws Exception;     //Buscar o encontrar todos los registros.
     public E findById(long id) throws Exception;   //Encontrar por id.
     public E saveOne(E entity) throws Exception;   //Guardad o registrar un objeto Entidad.
-    public E updateOne(E entity) throws Exception; //Actualizar un registro.
+    public E updateOne(E entity,long id) throws Exception; //Actualizar un registro.
     public boolean deleteById(long id) throws Exception;   //Eliminar un _Registro.
 
 }

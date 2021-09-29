@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @Repository
 public interface RepositorioVideojuego extends JpaRepository<Videojuego,Long> {
-    // implementados dos metodos
+    // implementados 3 metodos
     // metodo 1: findAllByActivo() buscar o entontrar por su estado(activo-no activo).
     @Query(value = "SELECT * FROM videojuegos WHERE videojuegos.activo=true",nativeQuery = true)
     List<Videojuego> findAllByActivo(); // la funcion te retorna todos los valores de la base de datos, siempre en cuando cumpla las condiciones de la query.
@@ -19,4 +19,9 @@ public interface RepositorioVideojuego extends JpaRepository<Videojuego,Long> {
     // metodo 2: buscar por su Identificador  y el estado (activo-no activo)
     @Query(value = "SELECT * FROM videojuegos WHERE videojuegos.id = :id AND videojuegos.activo=true", nativeQuery = true)
     Optional<Videojuego> buscarPorIdyActivo(@Param("id") long id);
+
+    // metodo 3: buscar por su titulo
+    @Query(value = "SELECT * FROM videojuegos WHERE videojuegos.titulo LIKE %:q% AND videojuegos.activo =true", nativeQuery = true)
+    List<Videojuego> buscarPorTitulo(@Param("q")String q);
+
 }

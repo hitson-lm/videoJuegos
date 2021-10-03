@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface BaseServicios<E> {     // con esta anotacion <E> decimos que nuestra interfaz va ser de tipo genérica, quiere decir que va poder recibir algun tipo Entidad.
 
-    // CREAMOS LOS METODOS QUE NECESITAMOS (CRUD)
+    // CREAMOS LOS METODOS COMUNES QUE SE USAN EN CADA ENTIDAD, (CRUD)
 
     public List<E> findAll() throws Exception;     //Buscar o encontrar todos los registros.
     public E findById(long id) throws Exception;   //Encontrar por id.
